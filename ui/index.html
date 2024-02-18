@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Forecast</h1>
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city...">
+            <button id="searchButton" onclick="callh()">Search</button>
+        </div>
+    </header>
+    <main>
+        <div class="weather-card">
+            <img id="weatherIcon" src="./test.jpg" alt="Weather Icon">
+            <div class="weather-details">
+                <h2 id="cityName" class="city-name">City Name</h2>
+                <p style="display: inline;" id="temperature">Temperature </p> <p style="display: inline;">&deg;C</p>
+                <p id="description">Weather Description</p>
+                <p id="windSpeed">Wind Speed: </p>
+                <p style="display: inline;" id="feelsLike">Feels Like: </p> <p style="display: inline;"> &deg;C</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Weather Forecast</p>
+    </footer>
+    
+    <script>
+        async function callh(){
+            let a = document.getElementById('cityInput').value;
+            let json = await pywebview.api.city_getter(a);
+            
+            document.getElementById('cityName').classList.remove('fade-in')
+
+            document.getElementById('searchButton').classList.add('button-clicked')
+            document.getElementById('cityName').innerText = json.location.name;
+            document.getElementById('temperature').innerText = json.current.temp_c;
+            document.getElementById('description').innerText = json.current.condition.text;
+            document.getElementById('windSpeed').innerText = "Wind Speed: " + json.current.wind_kph + " Kph";
+            document.getElementById('feelsLike').innerText = "Feels Like: " + json.current.feelslike_c;
+            document.getElementById('weatherIcon').src = json.current.condition.icon;
+            document.getElementById('cityName').classList.add('fade-in')
+        }
+    </script>
+</body>
+</html>

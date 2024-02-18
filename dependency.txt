@@ -1,0 +1,4 @@
+Linux system Dependedncies for pywebview
+
+libgirepository1.0-dev
+gtk or qt
