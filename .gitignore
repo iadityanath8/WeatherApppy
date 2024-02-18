@@ -1,2 +1,3 @@
 weatherenv/
 __pycache__/
+.env
