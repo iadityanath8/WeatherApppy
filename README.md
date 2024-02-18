@@ -13,7 +13,7 @@ This is a simple weather application built using PyWebview, which allows you to 
 1. Clone the repository:
 
     ```
-    git clone https://github.com/your-username/pywebview-weather-app.git
+    https://github.com/iadityanath8/WeatherApppy
     ```
 
 2. Install dependencies:
@@ -25,7 +25,7 @@ This is a simple weather application built using PyWebview, which allows you to 
 3. Run the application:
 
     ```
-    python main.py
+    python app.py
     ```
 
 ## Usage
