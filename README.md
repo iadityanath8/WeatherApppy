@@ -36,11 +36,11 @@ This is a simple weather application built using PyWebview, which allows you to 
 
 ## File Structure
 
-- `main.py`: Main Python script containing the PyWebview application code.
+- `app.py`: Main Python script containing the PyWebview application code.
+- `api.py` : Python script for fetching weather api using requests
 - `ui/index.html`: HTML file for the user interface.
 - `styles.css`: CSS file for styling the user interface.
-- `ima.jpg`: Default weather icon image.
-- `icons/`: Directory containing weather icon images.
+- `test.jpg`: Default weather icon image.
 
 ## Contributing
 
