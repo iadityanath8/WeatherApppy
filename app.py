@@ -19,6 +19,6 @@ class Api:
 
 if __name__ == '__main__':
     ap = Api()
-    window = webview.create_window('PyWebView Click Events', HTML_FILE,js_api=ap)
+    window = webview.create_window('Weather Forcast', HTML_FILE,js_api=ap)
 
     webview.start()
