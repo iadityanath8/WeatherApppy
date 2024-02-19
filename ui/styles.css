@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
+    overflow: hidden;
 }
 
 header {
@@ -17,27 +18,25 @@ header h1 {
 }
 
 main {
+    min-height: 80dvh;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 120px);
 }
 .weather-card {
-    background-color: #ffffff;
-    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 30px; /* Increase padding for a bigger card */
-    display: flex;
-    align-items: center;
-    max-width: 600px; /* Set a maximum width */
-    width: 90%; /* Set a relative width */
-    margin: 0 auto; /* Center the card */
+    width: 50dvw;
+    min-height: 50dvh; /* Set a relative width */
+    position: relative;
+    text-align: center;
 }
 
 .weather-card img {
     width: 80px; /* Increase the image size */
     height: 80px; /* Increase the image size */
-    margin-right: 30px; /* Increase margin */
+    margin: auto; /* Increase margin */
 }
 
 .weather-details {
@@ -141,4 +140,12 @@ footer {
 
 .button-clicked:active {
     transform: scale(1);
+}
+
+.ld-cnt {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
 }
